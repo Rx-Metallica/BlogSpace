@@ -1,9 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAppContext } from '../context/AppContext';
 
 const Navbar = () => {
 
-  const navigate = useNavigate();
+  const {navigate,token} = useAppContext();
   
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-gray-900 text-white shadow-md">
@@ -15,7 +16,7 @@ const Navbar = () => {
       {/* Right Side - Login */}
       <div>
         <button onClick={()=>navigate('/admin')} className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition duration-200">
-          Login
+          {token ? 'Dashboard' : "Login"}
         </button>
       </div>
     </nav>
