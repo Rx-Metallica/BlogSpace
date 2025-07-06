@@ -1,6 +1,6 @@
 import fs from 'fs';
 import Blog from '../models/Blog.js';
-import imagekit from '../configs/imagekit.js';
+import imagekit from '../configs/imageKit.js';
 
 
 
